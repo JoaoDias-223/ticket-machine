@@ -50,7 +50,7 @@ class Troco {
         while (valor % 2 != 0) { /* Erro 25 [código] - loop infinito porque a variável valor não é alterada */
             count++;
         }
-        papeisMoeda[0] = new PapelMoeda(2, count); /* Erro 17 [código] - sobrescrita do segundo elemento */
+        papeisMoeda[1] = new PapelMoeda(2, count); /* Erro 17 [código] - sobrescrita do segundo elemento */
     }
 
     public Iterator<PapelMoeda> getIterator() {
