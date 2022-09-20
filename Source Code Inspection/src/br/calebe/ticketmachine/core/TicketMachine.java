@@ -11,15 +11,15 @@ import java.util.Iterator;
 public class TicketMachine {
 
     /* Erro 1 [doc] - A classe não deveria ter atributos, pois não foi especificado no diagrama de classes */
-    protected int valor;
+    protected int precoDoBilhete;
     protected int saldo;
     protected int[] papelMoeda = {2, 5, 10, 20, 50, 100}; /* Erro 2 [doc] - Falta nota de 200 */
     /* Erro 9 [código] - Em vez de usar um array de Integer, ele poderia utilizar um array de PapelMoeda. Além disso, a variável
     * poderia ser renomeada para evitar ambiguidade com a entidade PapelMoeda */
 
     /* Erro 5 [código] - O primeiro argumento no construtor da classe deveria estar nomeado como precoDoBilhete */
-    public TicketMachine(int valor) {
-        this.valor = valor;
+    public TicketMachine(int precoDoBilhete) {
+        this.precoDoBilhete = precoDoBilhete;
         this.saldo = 0;
     }
 
@@ -49,7 +49,7 @@ public class TicketMachine {
     /* Erro 6 [código] - Na doc, a impressão do bilhete deveria debitar o valor do bilhete do saldo */
     /* Erro 7 [doc] - VER DOC, adicionar passo de débito no use case CSU02 */
     public String imprimir() throws SaldoInsuficienteException {
-        if (saldo < valor) {
+        if (saldo < precoDoBilhete) {
             throw new SaldoInsuficienteException();
         }
         String result = "*****************\n";
