@@ -54,7 +54,7 @@ public class TicketMachine {
         if (saldo < precoDoBilhete) {
             throw new SaldoInsuficienteException();
         }
-        saldo-= valor;
+        saldo-= precoDoBilhete;
         String result = "*****************\n";
         result += "*** R$ " + saldo + ",00 ****\n";
         result += "*****************\n";
