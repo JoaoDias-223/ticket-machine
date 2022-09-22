@@ -62,7 +62,7 @@ class Troco {
         @Override
         public boolean hasNext() {
             /* Erro 15 [código] - IndexOutOfBounds */
-            for (int i = 6; i >= 0; i++) { /* Erro 13 [código] - loop infinito */
+            for (int i = 6; i > 0; i--) { /* Erro 13 [código] - loop infinito */
                 if (troco.papeisMoeda[i] != null) {
                     return true;
                 }
