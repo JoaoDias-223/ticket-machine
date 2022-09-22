@@ -44,6 +44,7 @@ public class TicketMachine {
     /* Erro 3 [código] - Na doc, está especificado que o saldo deve ser zerado ao solicitar o troco */
     /* Erro 8 [código] - A função getTroco deveria retornar um TrocoIterator */
     public Iterator<Integer> getTroco() {
+        this.saldo = 0
         return null;
     }
 
