@@ -2,6 +2,8 @@ package br.calebe.ticketmachine.core;
 
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import br.calebe.ticketmachine.exception.SaldoInsuficienteException;
+import br.calebe.ticketmachine.core.Troco;
+import br.calebe.ticketmachine.core.Troco.TrocoIterator;
 
 import java.util.Iterator;
 
@@ -43,9 +45,10 @@ public class TicketMachine {
 
     /* Erro 3 [código] - Na doc, está especificado que o saldo deve ser zerado ao solicitar o troco */
     /* Erro 8 [código] - A função getTroco deveria retornar um TrocoIterator */
-    public Iterator<Integer> getTroco() {
-        this.saldo = 0
-        return null;
+    public TrocoIterator getTroco() {
+        TrocoIterator trocoIterator = new TrocoIterator(new Troco(this.getSaldo()));
+        this.saldo = 0;
+        return trocoIterator;
     }
 
     /* Erro 6 [código] - Na doc, a impressão do bilhete deveria debitar o valor do bilhete do saldo */
