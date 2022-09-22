@@ -29,7 +29,7 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         boolean achou = false;
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
-            if (papelMoeda[1] == quantia) { /* Erro 4 [código] - A variável i que deveria ser usada para acessar o array */
+            if (papelMoeda[i] == quantia) { /* Erro 4 [código] - A variável i que deveria ser usada para acessar o array */
                 achou = true;
             }
         }
