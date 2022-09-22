@@ -23,8 +23,8 @@ class Troco {
     /* Erro 19 [código] - Repetição desnecessária de código */
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
-        String[] notas = {100, 50, 20, 10, 5, 2};
-        
+        String[] notas = {200, 100, 50, 20, 10, 5, 2};
+       
         for (int i = 0; i < notas.length; i++) {
             int numeroDeNotas = this.getNumeroNotas(valor, notas[i]);
             papeisMoeda[i] = new PapelMoeda(notas[i], numeroDeNotas);

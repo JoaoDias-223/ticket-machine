@@ -16,7 +16,7 @@ public class TicketMachine {
     /* Erro 1 [doc] - A classe não deveria ter atributos, pois não foi especificado no diagrama de classes */
     protected int precoDoBilhete;
     protected int saldo;
-    protected int[] papelMoeda = {2, 5, 10, 20, 50, 100}; /* Erro 2 [doc] - Falta nota de 200 */
+    protected int[] papelMoeda = {2, 5, 10, 20, 50, 100, 200}; /* Erro 2 [doc] - Falta nota de 200 */
     /* Erro 9 [código] - Em vez de usar um array de Integer, ele poderia utilizar um array de PapelMoeda. Além disso, a variável
     * poderia ser renomeada para evitar ambiguidade com a entidade PapelMoeda */
 
