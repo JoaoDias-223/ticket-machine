@@ -8,7 +8,7 @@ import java.util.Iterator;
  */
 class Troco {
 
-    protected PapelMoeda[] papeisMoeda;/
+    protected PapelMoeda[] papeisMoeda;
     
     private int getNumeroNotas(int valorNota, int valorOriginal){
         int count = 0;
@@ -44,7 +44,7 @@ class Troco {
 
         @Override
         public boolean hasNext() {
-            for (int i = 6; i > 0; i--) {
+            for (int i = 6; i >= 0; i--) {
                 if (troco.papeisMoeda[i] != null) {
                     return true;
                 }
@@ -55,11 +55,9 @@ class Troco {
         @Override
         public PapelMoeda next() {
             PapelMoeda ret = null;
-            /* Erro 16 [código] - IndexOutOfBounds */
-            for (int i = 6; i >= 0 && ret != null; i++) {
+            for (int i = 6; i >= 0 && ret == null; i--) {
                 if (troco.papeisMoeda[i] != null) {
                     ret = troco.papeisMoeda[i];
-                    troco.papeisMoeda[i] = null;
                 }
             }
             return ret;
