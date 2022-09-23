@@ -63,7 +63,6 @@ class Troco {
             for (int i = 6; i >= 0 && ret != null; i++) {  /* Erro 14 [código] - loop infinito */
                 if (troco.papeisMoeda[i] != null) {
                     ret = troco.papeisMoeda[i];
-                    troco.papeisMoeda[i] = null; /* Erro 18 - Remoção desnecessária dos elementos do array */
                 }
             }
             return ret;
