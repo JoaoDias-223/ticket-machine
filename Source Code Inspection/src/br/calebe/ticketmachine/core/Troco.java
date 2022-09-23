@@ -8,7 +8,6 @@ import java.util.Iterator;
  */
 class Troco {
 
-    /* Erro 11 [doc] - Na doc, esta classe não possui atributos */
     protected PapelMoeda[] papeisMoeda;
     
     private int getNumeroNotas(int valorNota, int valorOriginal){
@@ -20,7 +19,6 @@ class Troco {
         return count;
     }
 
-    /* Erro 19 [código] - Repetição desnecessária de código */
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
         String[] notas = {200, 100, 50, 20, 10, 5, 2};
@@ -38,7 +36,6 @@ class Troco {
 
     class TrocoIterator implements Iterator<PapelMoeda> {
 
-        /* Erro 12 [doc] - Na doc, esta classe não possui atributos */
         protected Troco troco;
 
         public TrocoIterator(Troco troco) {
@@ -47,8 +44,7 @@ class Troco {
 
         @Override
         public boolean hasNext() {
-            /* Erro 15 [código] - IndexOutOfBounds */
-            for (int i = 6; i >= 0; i--) { /* Erro 13 [código] - loop infinito */
+            for (int i = 6; i >= 0; i--) {
                 if (troco.papeisMoeda[i] != null) {
                     return true;
                 }
@@ -59,8 +55,7 @@ class Troco {
         @Override
         public PapelMoeda next() {
             PapelMoeda ret = null;
-            /* Erro 16 [código] - IndexOutOfBounds */
-            for (int i = 6; i >= 0 && ret == null; i--) {  /* Erro 14 [código] - loop infinito */
+            for (int i = 6; i >= 0 && ret == null; i--) {
                 if (troco.papeisMoeda[i] != null) {
                     ret = troco.papeisMoeda[i];
                 }
