@@ -14,6 +14,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots package -f  Source Code Inspection
+        run: mvn --batch-mode --update-snapshots package -f  "Source Code Inspection"
       - name: Unit test Maven
-        run: mvn --batch-mode test -f Source Code Inspection
+        run: mvn --batch-mode test -f "Source Code Inspection"
