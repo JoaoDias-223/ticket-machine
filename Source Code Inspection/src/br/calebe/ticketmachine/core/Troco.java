@@ -34,9 +34,11 @@ class Troco {
         return new TrocoIterator(this);
     }
 
-    class TrocoIterator implements Iterator<PapelMoeda> {
+    static public class TrocoIterator implements Iterator<PapelMoeda> {
 
         protected Troco troco;
+
+        private int currentIndex = 0;
 
         public TrocoIterator(Troco troco) {
             this.troco = troco;
@@ -44,28 +46,18 @@ class Troco {
 
         @Override
         public boolean hasNext() {
-            for (int i = 6; i >= 0; i--) {
-                if (troco.papeisMoeda[i] != null) {
-                    return true;
-                }
-            }
-            return false;
+            return currentIndex < troco.papeisMoeda.length && troco.papeisMoeda[currentIndex] != null;
         }
 
         @Override
         public PapelMoeda next() {
-            PapelMoeda ret = null;
-            for (int i = 6; i >= 0 && ret == null; i--) {
-                if (troco.papeisMoeda[i] != null) {
-                    ret = troco.papeisMoeda[i];
-                }
-            }
-            return ret;
+            return troco.papeisMoeda[currentIndex++];
         }
 
         @Override
         public void remove() {
-            next();
+            int beforeIndex = currentIndex > 0 ? currentIndex - 1 : 0;
+            troco.papeisMoeda[beforeIndex] = null;
         }
     }
 }
