@@ -10,10 +10,15 @@ class Troco {
 
     protected PapelMoeda[] papeisMoeda;
     
-    private int getNumeroNotas(int valorNota, int valorOriginal){
+    private int getNumeroNotas(int valorOriginal, int valorNota){
         int count = 0;
-        while (valorOriginal % valorNota != 0) {
+        while (valorOriginal != 0 && valorNota % valorOriginal != 0 && valorNota < valorOriginal) {
             count++;
+            valorOriginal-= valorNota;
+        }
+        if (valorOriginal == valorNota){
+            count++;
+            valorOriginal-= valorNota;
         }
         
         return count;
