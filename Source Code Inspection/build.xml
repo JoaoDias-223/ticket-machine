@@ -10,6 +10,14 @@
 <project name="Source_Code_Inspection" default="default" basedir=".">
     <description>Builds, tests, and runs the project Source Code Inspection.</description>
     <import file="nbproject/build-impl.xml"/>
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="dist" location="dist"/>
+   <property name="lib" location="lib" />
+
+    <path id="classpath">
+      <pathelement location="${lib}/junit-4.11.jar" />
+   </path>
     <!--
 
     There exist several targets which are by default empty and which can be 
@@ -70,4 +78,36 @@
     nbproject/build-impl.xml file. 
 
     -->
+     <target name="init">
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build}"/>
+    </target>
+      <target name="compile" depends="init"
+        description="compile the source">
+        <!-- Compile the Java code from ${src} into ${build} -->
+        <javac srcdir="${src}" destdir="${build}"/>
+    </target>
+
+      <target name="dist" depends="compile"
+        description="generate the distribution">
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
+  </target>
+
+   <target name="test" depends="compile">
+      <mkdir dir="${report}" />
+      <junit printsummary="yes">
+         <classpath>
+            <path refid="classpath" />
+         </classpath>
+         <formatter type="xml" />
+         <test todir="${report}" haltonfailure="yes" />
+      </junit>
+   </target>
+
 </project>
