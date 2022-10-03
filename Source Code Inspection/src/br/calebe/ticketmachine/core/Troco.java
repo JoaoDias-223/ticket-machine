@@ -6,7 +6,7 @@ import java.util.Iterator;
  *
  * @author Calebe de Paula Bianchini
  */
-class Troco {
+public class Troco {
 
     protected PapelMoeda[] papeisMoeda;
     
@@ -25,9 +25,9 @@ class Troco {
     }
 
     public Troco(int valor) {
-        papeisMoeda = new PapelMoeda[6];
-        String[] notas = {200, 100, 50, 20, 10, 5, 2};
-       
+        papeisMoeda = new PapelMoeda[7];
+        int[] notas = {200, 100, 50, 20, 10, 5, 2};
+
         for (int i = 0; i < notas.length; i++) {
             int numeroDeNotas = this.getNumeroNotas(valor, notas[i]);
             papeisMoeda[i] = new PapelMoeda(notas[i], numeroDeNotas);

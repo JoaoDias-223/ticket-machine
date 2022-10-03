@@ -13,7 +13,7 @@ import java.util.Iterator;
  */
 public class TicketMachine {
 
-    private int valor;
+    private int precoDoBilhete;
     private int saldo;
     private int[] papelMoeda = {2, 5, 10, 20, 50, 100, 200};
 
