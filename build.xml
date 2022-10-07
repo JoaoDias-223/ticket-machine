@@ -7,9 +7,9 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="Source_Code_Inspection" default="default" basedir="Source Code Inspection">
+<project name="Ticket Machine" default="default" basedir="./">
     <description>Builds, tests, and runs the project Source Code Inspection.</description>
-    <import file="Source Code Inspection/nbproject/build-impl.xml"/>
+    <import file="/nbproject/build-impl.xml"/>
     <property name="src" location="src"/>
     <property name="build" location="build"/>
     <property name="dist" location="dist"/>
