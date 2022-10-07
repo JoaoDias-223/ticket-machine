@@ -2,10 +2,7 @@ package br.calebe.ticketmachine.core;
 
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import br.calebe.ticketmachine.exception.SaldoInsuficienteException;
-import br.calebe.ticketmachine.core.Troco;
 import br.calebe.ticketmachine.core.Troco.TrocoIterator;
-
-import java.util.Iterator;
 
 /**
  *
