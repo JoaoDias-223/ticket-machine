@@ -1,4 +1,4 @@
-Source-Code-Inspection [![Build Status](https://travis-ci.org/Prof-Calebe/Source-Code-Inspection.svg?branch=master)](https://travis-ci.org/Prof-Calebe/Source-Code-Inspection)
+Ticket Machine [![Build Status](https://app.travis-ci.com/JoaoDias-223/ticket-machine.svg?branch=main)](https://app.travis-ci.com/github/JoaoDias-223/ticket-machine)
 ======================
 
-Link para o Travis-CI: https://travis-ci.org/Prof-Calebe/Source-Code-Inspection
+Link para o Travis-CI: https://app.travis-ci.com/github/JoaoDias-223/ticket-machine
