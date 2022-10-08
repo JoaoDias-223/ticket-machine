@@ -14,5 +14,5 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: ant compile jar run -f  "Source Code Inspection"
+        run: mvn package
        
