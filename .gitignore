@@ -25,3 +25,6 @@ replay_pid*
 ticket-machine.iml
 .idea
 src/br/calebe/ticketmachine/.DS_Store
+.DS_Store
+target/
+out/
